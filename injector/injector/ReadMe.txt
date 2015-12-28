@@ -1,40 +1,16 @@
-========================================================================
-    CONSOLE APPLICATION : injector Project Overview
-========================================================================
+## Tool 2: injector
+The purpose of this tool is to inject code in a running process. We created it to test the signature loading mitigation of Edge TH2.
+Here is the syntax:
 
-AppWizard has created this injector application for you.
+```
+C:\>injector.exe
+Usage of the injector.
 
-This file contains a summary of what you will find in each of the files that
-make up your injector application.
+injector.exe /d dll_file PID
+injector.exe /s shellcode_file PID
+    /d dll_file PID: dll injection via LoadLibrary().
+    /s shellcode_file PID: shellcode injection.
+```
 
-
-injector.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-injector.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-injector.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named injector.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+The /d option uses the LoadLibrary() function in order to load a DLL.
+the /s option push the shellcode in memory and execute it directly.
