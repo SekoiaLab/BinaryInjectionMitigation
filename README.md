@@ -3,6 +3,8 @@ Two tools used during our analysis of the Microsoft binary injection mitigation 
 
 ## Tool 1: GetSignatureMitigation
 The purpose of this tool is to list the signature mitigation flags in a running process.
+To compile this binary, please download and install the latest Windows SDK version (in my case Version 1511 - updated on November 30th, 2015).
+
 Example of usage on the PID 3704 (MicrosoftEdgeCP.exe in my case):
 
 ```
