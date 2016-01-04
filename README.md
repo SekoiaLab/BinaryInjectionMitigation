@@ -1,5 +1,6 @@
 # BinaryInjectionMitigation
 Two tools used during our analysis of the Microsoft binary injection mitigation implemented in Edge TH2.
+More information on this blog post: http://www.sekoia.fr/blog/microsoft-edge-binary-injection-mitigation-overview/
 
 ## Tool 1: GetSignatureMitigation
 The purpose of this tool is to list the signature mitigation flags in a running process.
